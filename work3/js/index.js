@@ -47,11 +47,12 @@ const arrr = new Array(1,2,3,4,5);
 document.write(arr + '<br>');
 document.write(arrr + '<br>');
 
-var arrrr = {
+/*var arrrr = {
     ['блакитний', 'червоний', 'зелений'],
     ['blue', 'red', 'green'],
 };
 alert(arrrr[1] [1]);
+*/
 
 
 
