@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hangman</title>
+</head>
+<body>
+    <h1>hangman</h1>
+    <script>
+        //Масив із словами
+
+        let words = [
+            "програма",
+            "макака",
+            "чарівник",
+            "високоповажний"
+        ];
+
+        //Вибираємо випадкове число
+
+        let word = words[Math.floor(Math.random() * words.length)];
+
+        //Створюємо підсумковий масив
+
+        let answerArray = [];
+        for (let i = 0; i < word.length; i++) {
+            answerArray[i] = "_";
+        }
+        let remainingLetters = word.length;
+
+        //Ігровий цикл
+
+        while (remainingLetters > 0) {
+            alert(answerArray.join(" "));
+            let guess = prompt ("Відгадай букву або натисни СКАСУВАТИ для виходу з гри");
+            if (guess === null) {
+                break;
+            }else if (guess.length !== 1) {
+                alert("Будь ласка введіть одну букву");
+            }else {
+                for (let j = 0; j < word.length; j++) {
+                    if (word[j] === guess) {
+                        answerArray[j] = guess;
+                        remainingLetters--;
+                    }
+                }
+            }
+        }
+
+        //Відображення відповіді і привітання гравця
+        alert(answerArray.join(" "));
+        alert(`Відмінно! Було загадано слово ${word}`);
+
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
