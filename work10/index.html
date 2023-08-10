@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Classwork</title>
+    <style>
+        * {
+            font-size: 1.3rem;
+        }
+
+        pre {
+            background: silver;
+
+        }
+
+        .green {
+            color: green;
+        }
+
+        li:nth-child(odd) {
+            background: #e1e6e5;
+            margin: 1rem 0;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", () => {
+            document.getElementsByTagName("ol")[0].addEventListener("dblclick", (e) => {
+                e.target.style.backgroundColor = "green"
+                e.target.style.opacity = ".3"
+                e.target.style.fontSize = ".8rem"
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <ol>
+        <li>
+            * В папке calculator дана верстка макета калькулятора. Необходимо сделать этот калькулятор рабочим.<br>
+            * При клике на клавиши с цифрами - набор введенных цифр должен быть показан на табло калькулятора.<br>
+            * При клике на знаки операторов (`*`, `/`, `+`, `-`) на табло ничего не происходит - программа ждет введения
+            второго числа для выполнения операции.<br>
+            * Если пользователь ввел одно число, выбрал оператор, и ввел второе число, то при нажатии как кнопки `=`,
+            так и любого из операторов, в табло должен появиться результат выполенния предыдущего выражения.<br>
+            * При нажатии клавиш `M+` или `M-` в левой части табло необходимо показать маленькую букву `m` - это значит,
+            что в памяти хранится число. Нажатие на `MRC` покажет число из памяти на экране. Повторное нажатие `MRC`
+            должно очищать память.
+        </li>
+    </ol>
+</body>
+
+</html>
